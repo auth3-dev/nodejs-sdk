@@ -1,0 +1,32 @@
+{
+    "name": "@auth3-dev/nodejs-sdk",
+    "description": "Auth3 Identity Platform Administrative SDK for Node.js backends",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "@grpc/grpc-js": "1.3.7",
+        "google-protobuf": "3.18.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/auth3-dev/nodejs-sdk.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "Apache-2.0",
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/auth3-dev/nodejs-sdk/issues"
+    },
+    "homepage": "https://docs.auth3.dev/apis/identity-platform/administrative",
+    "devDependencies": {
+        "client-oauth2": "^4.3.3"
+    }
+}
