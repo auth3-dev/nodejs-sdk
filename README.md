@@ -10,7 +10,7 @@ Check-out the API documentation at [https://docs.auth3.dev/apis/identity-platfor
 
 For a quick-start example code check [examples](examples/). 
 
-Once you've initialised the client once you can use it to perform multiple requests.
+Once you've initialised the client you can use it to perform multiple requests.
 
 ## Run
 
