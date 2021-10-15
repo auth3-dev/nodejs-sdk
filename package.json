@@ -13,8 +13,14 @@
         "type": "git",
         "url": "https://github.com/auth3-dev/nodejs-sdk.git"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "authentication",
+        "security",
+        "authorization",
+        "oauth2",
+        "identity"
+    ],
+    "author": "Auth3.dev",
     "license": "Apache-2.0",
     "licenses": [
         {
@@ -25,7 +31,7 @@
     "bugs": {
         "url": "https://github.com/auth3-dev/nodejs-sdk/issues"
     },
-    "homepage": "https://docs.auth3.dev/apis/identity-platform/administrative",
+    "homepage": "https://auth3.dev/",
     "devDependencies": {
         "client-oauth2": "^4.3.3"
     }

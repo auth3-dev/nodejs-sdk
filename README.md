@@ -6,6 +6,28 @@ The official [Auth3](https://auth3.dev?utm_source=github&utm_medium=sdk&utm_camp
 
 Check-out the API documentation at [https://docs.auth3.dev/apis/identity-platform/administrative](https://docs.auth3.dev/apis/identity-platform/administrative?utm_source=github&utm_medium=sdk&utm_campaign=nodejs) for further help.
 
+## Installation
+
+With yarn:
+
+```bash
+yarn add @auth3-dev/nodejs-sdk
+```
+
+With npm:
+
+```bash
+npm i @auth3-dev/nodejs-sdk --save
+```
+
+Otherwise add to your `package.json` the entry with the version you're interested in:
+
+```json
+"dependencies": {
+  "@auth3-dev/nodejs-sdk": "*"
+},
+```
+
 ## Usage
 
 For a quick-start example code check [examples](examples/). 
@@ -32,6 +54,7 @@ Not your target language? Check out our official SDKs for:
   * [cpp](https://github.com/auth3-dev/cpp-sdk)
   * [java](https://github.com/auth3-dev/java-sdk)
   * [nodejs](https://github.com/auth3-dev/nodejs-sdk)
+  * [dart](https://github.com/auth3-dev/dart-sdk)
   * [python](https://github.com/auth3-dev/python-sdk)
   * [php](https://github.com/auth3-dev/php-sdk)
   * [ruby](https://github.com/auth3-dev/ruby-sdk)
