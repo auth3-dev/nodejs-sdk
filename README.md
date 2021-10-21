@@ -73,4 +73,4 @@ Customers of the Auth3 Identity Platform can access support through the official
 
 ## License
 
-Read the [LICENSE](./LICENSE).
+Read the [LICENSE](https://github.com/auth3-dev/nodejs-sdk/blob/main/LICENSE).
