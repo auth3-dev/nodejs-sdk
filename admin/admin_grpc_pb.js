@@ -402,6 +402,28 @@ function deserialize_depot_devtools_auth_v0_identity_admin_GetIdentitiesResponse
   return devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_depot_devtools_auth_v0_identity_admin_GetIdentityByIdentifierRequest(arg) {
+  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierRequest)) {
+    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.GetIdentityByIdentifierRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_depot_devtools_auth_v0_identity_admin_GetIdentityByIdentifierRequest(buffer_arg) {
+  return devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_depot_devtools_auth_v0_identity_admin_GetIdentityByIdentifierResponse(arg) {
+  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierResponse)) {
+    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.GetIdentityByIdentifierResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_depot_devtools_auth_v0_identity_admin_GetIdentityByIdentifierResponse(buffer_arg) {
+  return devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_depot_devtools_auth_v0_identity_admin_GetIdentityLoginAttemptsRequest(arg) {
   if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityLoginAttemptsRequest)) {
     throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.GetIdentityLoginAttemptsRequest');
@@ -733,6 +755,17 @@ var AdminService = exports.AdminService = {
     requestDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_GetIdentityRequest,
     responseSerialize: serialize_depot_devtools_auth_v0_identity_admin_GetIdentityResponse,
     responseDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_GetIdentityResponse,
+  },
+  getIdentityByIdentifier: {
+    path: '/depot.devtools.auth.v0.identity.admin.Admin/GetIdentityByIdentifier',
+    requestStream: false,
+    responseStream: false,
+    requestType: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierRequest,
+    responseType: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierResponse,
+    requestSerialize: serialize_depot_devtools_auth_v0_identity_admin_GetIdentityByIdentifierRequest,
+    requestDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_GetIdentityByIdentifierRequest,
+    responseSerialize: serialize_depot_devtools_auth_v0_identity_admin_GetIdentityByIdentifierResponse,
+    responseDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_GetIdentityByIdentifierResponse,
   },
   getIdentitiesByAttribute: {
     path: '/depot.devtools.auth.v0.identity.admin.Admin/GetIdentitiesByAttribute',

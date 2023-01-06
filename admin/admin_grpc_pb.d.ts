@@ -9,6 +9,7 @@ import * as grpc from "@grpc/grpc-js";
 interface IAdminService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   createIdentity: grpc.MethodDefinition<devtools_auth_v0_proto_identity_admin_admin_pb.CreateIdentityRequest, devtools_auth_v0_proto_identity_admin_admin_pb.CreateIdentityResponse>;
   getIdentity: grpc.MethodDefinition<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityRequest, devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityResponse>;
+  getIdentityByIdentifier: grpc.MethodDefinition<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierRequest, devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierResponse>;
   getIdentitiesByAttribute: grpc.MethodDefinition<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeRequest, devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeResponse>;
   getIdentities: grpc.MethodDefinition<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesRequest, devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesResponse>;
   updateIdentity: grpc.MethodDefinition<devtools_auth_v0_proto_identity_admin_admin_pb.UpdateIdentityRequest, devtools_auth_v0_proto_identity_admin_admin_pb.UpdateIdentityResponse>;
@@ -46,6 +47,7 @@ export const AdminService: IAdminService;
 export interface IAdminServer extends grpc.UntypedServiceImplementation {
   createIdentity: grpc.handleUnaryCall<devtools_auth_v0_proto_identity_admin_admin_pb.CreateIdentityRequest, devtools_auth_v0_proto_identity_admin_admin_pb.CreateIdentityResponse>;
   getIdentity: grpc.handleUnaryCall<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityRequest, devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityResponse>;
+  getIdentityByIdentifier: grpc.handleUnaryCall<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierRequest, devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierResponse>;
   getIdentitiesByAttribute: grpc.handleUnaryCall<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeRequest, devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeResponse>;
   getIdentities: grpc.handleUnaryCall<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesRequest, devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesResponse>;
   updateIdentity: grpc.handleUnaryCall<devtools_auth_v0_proto_identity_admin_admin_pb.UpdateIdentityRequest, devtools_auth_v0_proto_identity_admin_admin_pb.UpdateIdentityResponse>;
@@ -86,6 +88,9 @@ export class AdminClient extends grpc.Client {
   getIdentity(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityRequest, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityResponse>): grpc.ClientUnaryCall;
   getIdentity(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityResponse>): grpc.ClientUnaryCall;
   getIdentity(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityResponse>): grpc.ClientUnaryCall;
+  getIdentityByIdentifier(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierRequest, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierResponse>): grpc.ClientUnaryCall;
+  getIdentityByIdentifier(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierResponse>): grpc.ClientUnaryCall;
+  getIdentityByIdentifier(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentityByIdentifierResponse>): grpc.ClientUnaryCall;
   getIdentitiesByAttribute(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeRequest, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeResponse>): grpc.ClientUnaryCall;
   getIdentitiesByAttribute(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeResponse>): grpc.ClientUnaryCall;
   getIdentitiesByAttribute(argument: devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<devtools_auth_v0_proto_identity_admin_admin_pb.GetIdentitiesByAttributeResponse>): grpc.ClientUnaryCall;

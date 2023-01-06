@@ -56,6 +56,12 @@ export namespace CreateIdentityResponse {
 }
 
 export class GetIdentitiesRequest extends jspb.Message {
+  getPageSize(): number;
+  setPageSize(value: number): void;
+
+  getPageToken(): string;
+  setPageToken(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetIdentitiesRequest.AsObject;
   static toObject(includeInstance: boolean, msg: GetIdentitiesRequest): GetIdentitiesRequest.AsObject;
@@ -68,6 +74,8 @@ export class GetIdentitiesRequest extends jspb.Message {
 
 export namespace GetIdentitiesRequest {
   export type AsObject = {
+    pageSize: number,
+    pageToken: string,
   }
 }
 
@@ -76,6 +84,12 @@ export class GetIdentitiesResponse extends jspb.Message {
   getIdentitiesList(): Array<GetIdentitiesResponse.Identity>;
   setIdentitiesList(value: Array<GetIdentitiesResponse.Identity>): void;
   addIdentities(value?: GetIdentitiesResponse.Identity, index?: number): GetIdentitiesResponse.Identity;
+
+  getNextPageToken(): string;
+  setNextPageToken(value: string): void;
+
+  getTotalSize(): number;
+  setTotalSize(value: number): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetIdentitiesResponse.AsObject;
@@ -90,6 +104,8 @@ export class GetIdentitiesResponse extends jspb.Message {
 export namespace GetIdentitiesResponse {
   export type AsObject = {
     identitiesList: Array<GetIdentitiesResponse.Identity.AsObject>,
+    nextPageToken: string,
+    totalSize: number,
   }
 
   export class Identity extends jspb.Message {
@@ -226,6 +242,120 @@ export namespace GetIdentityResponse {
   }
 
   export const Lock: LockMap;
+}
+
+export class GetIdentityByIdentifierRequest extends jspb.Message {
+  getAttribute(): string;
+  setAttribute(value: string): void;
+
+  getValue(): string;
+  setValue(value: string): void;
+
+  getConnectionId(): string;
+  setConnectionId(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetIdentityByIdentifierRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetIdentityByIdentifierRequest): GetIdentityByIdentifierRequest.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: GetIdentityByIdentifierRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetIdentityByIdentifierRequest;
+  static deserializeBinaryFromReader(message: GetIdentityByIdentifierRequest, reader: jspb.BinaryReader): GetIdentityByIdentifierRequest;
+}
+
+export namespace GetIdentityByIdentifierRequest {
+  export type AsObject = {
+    attribute: string,
+    value: string,
+    connectionId: string,
+  }
+}
+
+export class GetIdentityByIdentifierResponse extends jspb.Message {
+  hasIdentity(): boolean;
+  clearIdentity(): void;
+  getIdentity(): GetIdentityByIdentifierResponse.Identity | undefined;
+  setIdentity(value?: GetIdentityByIdentifierResponse.Identity): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetIdentityByIdentifierResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetIdentityByIdentifierResponse): GetIdentityByIdentifierResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: GetIdentityByIdentifierResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetIdentityByIdentifierResponse;
+  static deserializeBinaryFromReader(message: GetIdentityByIdentifierResponse, reader: jspb.BinaryReader): GetIdentityByIdentifierResponse;
+}
+
+export namespace GetIdentityByIdentifierResponse {
+  export type AsObject = {
+    identity?: GetIdentityByIdentifierResponse.Identity.AsObject,
+  }
+
+  export class Identity extends jspb.Message {
+    getIdentityId(): string;
+    setIdentityId(value: string): void;
+
+    hasCreatedAt(): boolean;
+    clearCreatedAt(): void;
+    getCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+    hasUpdatedAt(): boolean;
+    clearUpdatedAt(): void;
+    getUpdatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+    setUpdatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+    getMainIdentifier(): string;
+    setMainIdentifier(value: string): void;
+
+    getTraitsId(): string;
+    setTraitsId(value: string): void;
+
+    clearAddressesIdsList(): void;
+    getAddressesIdsList(): Array<string>;
+    setAddressesIdsList(value: Array<string>): void;
+    addAddressesIds(value: string, index?: number): string;
+
+    getCredentialsIdsMap(): jspb.Map<string, string>;
+    clearCredentialsIdsMap(): void;
+    getSchemaId(): string;
+    setSchemaId(value: string): void;
+
+    getLock(): GetIdentityByIdentifierResponse.Identity.LockMap[keyof GetIdentityByIdentifierResponse.Identity.LockMap];
+    setLock(value: GetIdentityByIdentifierResponse.Identity.LockMap[keyof GetIdentityByIdentifierResponse.Identity.LockMap]): void;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): Identity.AsObject;
+    static toObject(includeInstance: boolean, msg: Identity): Identity.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: Identity, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): Identity;
+    static deserializeBinaryFromReader(message: Identity, reader: jspb.BinaryReader): Identity;
+  }
+
+  export namespace Identity {
+    export type AsObject = {
+      identityId: string,
+      createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+      mainIdentifier: string,
+      traitsId: string,
+      addressesIdsList: Array<string>,
+      credentialsIdsMap: Array<[string, string]>,
+      schemaId: string,
+      lock: GetIdentityByIdentifierResponse.Identity.LockMap[keyof GetIdentityByIdentifierResponse.Identity.LockMap],
+    }
+
+    export interface LockMap {
+      UNLOCKED: 0;
+      ADMIN_LOCKED: 1;
+    }
+
+    export const Lock: LockMap;
+  }
 }
 
 export class GetIdentitiesByAttributeRequest extends jspb.Message {
