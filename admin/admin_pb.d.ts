@@ -999,9 +999,6 @@ export namespace GetConnectionsResponse {
 }
 
 export class UpdateConnectionRequest extends jspb.Message {
-  getName(): string;
-  setName(value: string): void;
-
   getClientId(): string;
   setClientId(value: string): void;
 
@@ -1043,7 +1040,6 @@ export class UpdateConnectionRequest extends jspb.Message {
 
 export namespace UpdateConnectionRequest {
   export type AsObject = {
-    name: string,
     clientId: string,
     clientSecret: string,
     buttonImageUrl: string,

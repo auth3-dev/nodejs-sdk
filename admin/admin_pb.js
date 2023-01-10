@@ -7819,7 +7819,6 @@ proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest.prototype.to
  */
 proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     clientId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     clientSecret: jspb.Message.getFieldWithDefault(msg, 3, ""),
     buttonImageUrl: jspb.Message.getFieldWithDefault(msg, 4, ""),
@@ -7865,10 +7864,6 @@ proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest.deserializeB
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.setClientId(value);
@@ -7934,13 +7929,6 @@ proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest.prototype.se
  */
 proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
   f = message.getClientId();
   if (f.length > 0) {
     writer.writeString(
@@ -8074,24 +8062,6 @@ proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest.Types = {
   TOTP: 3,
   OIDC: 4
 };
-
-/**
- * optional string name = 1;
- * @return {string}
- */
-proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest} returns this
- */
-proto.depot.devtools.auth.v0.identity.admin.UpdateConnectionRequest.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
-};
-
 
 /**
  * optional string client_id = 2;
