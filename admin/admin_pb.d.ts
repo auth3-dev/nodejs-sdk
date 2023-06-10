@@ -197,8 +197,8 @@ export class GetIdentityResponse extends jspb.Message {
   getMainIdentifier(): string;
   setMainIdentifier(value: string): void;
 
-  getTraitsId(): string;
-  setTraitsId(value: string): void;
+  getProfileId(): string;
+  setProfileId(value: string): void;
 
   clearAddressesIdsList(): void;
   getAddressesIdsList(): Array<string>;
@@ -229,7 +229,7 @@ export namespace GetIdentityResponse {
     createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     mainIdentifier: string,
-    traitsId: string,
+    profileId: string,
     addressesIdsList: Array<string>,
     credentialsIdsMap: Array<[string, string]>,
     schemaId: string,
@@ -310,8 +310,8 @@ export namespace GetIdentityByIdentifierResponse {
     getMainIdentifier(): string;
     setMainIdentifier(value: string): void;
 
-    getTraitsId(): string;
-    setTraitsId(value: string): void;
+    getProfileId(): string;
+    setProfileId(value: string): void;
 
     clearAddressesIdsList(): void;
     getAddressesIdsList(): Array<string>;
@@ -342,7 +342,7 @@ export namespace GetIdentityByIdentifierResponse {
       createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
       updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
       mainIdentifier: string,
-      traitsId: string,
+      profileId: string,
       addressesIdsList: Array<string>,
       credentialsIdsMap: Array<[string, string]>,
       schemaId: string,
@@ -420,8 +420,8 @@ export namespace GetIdentitiesByAttributeResponse {
     getMainIdentifier(): string;
     setMainIdentifier(value: string): void;
 
-    getTraitsId(): string;
-    setTraitsId(value: string): void;
+    getProfileId(): string;
+    setProfileId(value: string): void;
 
     clearAddressesIdsList(): void;
     getAddressesIdsList(): Array<string>;
@@ -452,7 +452,7 @@ export namespace GetIdentitiesByAttributeResponse {
       createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
       updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
       mainIdentifier: string,
-      traitsId: string,
+      profileId: string,
       addressesIdsList: Array<string>,
       credentialsIdsMap: Array<[string, string]>,
       schemaId: string,
@@ -609,8 +609,8 @@ export namespace GetCredentialsResponse {
     getType(): number;
     setType(value: number): void;
 
-    getName(): string;
-    setName(value: string): void;
+    getConnectionId(): string;
+    setConnectionId(value: string): void;
 
     getConfigured(): boolean;
     setConfigured(value: boolean): void;
@@ -632,7 +632,7 @@ export namespace GetCredentialsResponse {
       updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
       identityId: string,
       type: number,
-      name: string,
+      connectionId: string,
       configured: boolean,
     }
   }
@@ -685,8 +685,8 @@ export namespace UpdateCredentialResponse {
 }
 
 export class CreateConnectionRequest extends jspb.Message {
-  getName(): string;
-  setName(value: string): void;
+  getId(): string;
+  setId(value: string): void;
 
   getClientId(): string;
   setClientId(value: string): void;
@@ -726,7 +726,7 @@ export class CreateConnectionRequest extends jspb.Message {
 
 export namespace CreateConnectionRequest {
   export type AsObject = {
-    name: string,
+    id: string,
     clientId: string,
     clientSecret: string,
     buttonImageUrl: string,
@@ -805,8 +805,8 @@ export namespace CreateConnectionRequest {
 }
 
 export class CreateConnectionResponse extends jspb.Message {
-  getName(): string;
-  setName(value: string): void;
+  getId(): string;
+  setId(value: string): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateConnectionResponse.AsObject;
@@ -820,7 +820,7 @@ export class CreateConnectionResponse extends jspb.Message {
 
 export namespace CreateConnectionResponse {
   export type AsObject = {
-    name: string,
+    id: string,
   }
 }
 
@@ -862,8 +862,8 @@ export namespace GetConnectionsResponse {
   }
 
   export class Connection extends jspb.Message {
-    getName(): string;
-    setName(value: string): void;
+    getId(): string;
+    setId(value: string): void;
 
     getClientId(): string;
     setClientId(value: string): void;
@@ -888,9 +888,6 @@ export namespace GetConnectionsResponse {
     getType(): GetConnectionsResponse.TypesMap[keyof GetConnectionsResponse.TypesMap];
     setType(value: GetConnectionsResponse.TypesMap[keyof GetConnectionsResponse.TypesMap]): void;
 
-    getId(): string;
-    setId(value: string): void;
-
     getScopes(): string;
     setScopes(value: string): void;
 
@@ -909,7 +906,7 @@ export namespace GetConnectionsResponse {
 
   export namespace Connection {
     export type AsObject = {
-      name: string,
+      id: string,
       clientId: string,
       clientSecret: string,
       buttonImageUrl: string,
@@ -917,7 +914,6 @@ export namespace GetConnectionsResponse {
       oidcDiscoveryUrl: string,
       mfaList: Array<string>,
       type: GetConnectionsResponse.TypesMap[keyof GetConnectionsResponse.TypesMap],
-      id: string,
       scopes: string,
       purpose: GetConnectionsResponse.PurposesMap[keyof GetConnectionsResponse.PurposesMap],
     }
@@ -1988,82 +1984,82 @@ export namespace UpdateAddressResponse {
   }
 }
 
-export class GetTraitsRequest extends jspb.Message {
+export class GetProfileRequest extends jspb.Message {
   getIdentityId(): string;
   setIdentityId(value: string): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): GetTraitsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: GetTraitsRequest): GetTraitsRequest.AsObject;
+  toObject(includeInstance?: boolean): GetProfileRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetProfileRequest): GetProfileRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: GetTraitsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): GetTraitsRequest;
-  static deserializeBinaryFromReader(message: GetTraitsRequest, reader: jspb.BinaryReader): GetTraitsRequest;
+  static serializeBinaryToWriter(message: GetProfileRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetProfileRequest;
+  static deserializeBinaryFromReader(message: GetProfileRequest, reader: jspb.BinaryReader): GetProfileRequest;
 }
 
-export namespace GetTraitsRequest {
+export namespace GetProfileRequest {
   export type AsObject = {
     identityId: string,
   }
 }
 
-export class GetTraitsResponse extends jspb.Message {
-  getTraits(): string;
-  setTraits(value: string): void;
+export class GetProfileResponse extends jspb.Message {
+  getProfile(): string;
+  setProfile(value: string): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): GetTraitsResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: GetTraitsResponse): GetTraitsResponse.AsObject;
+  toObject(includeInstance?: boolean): GetProfileResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetProfileResponse): GetProfileResponse.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: GetTraitsResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): GetTraitsResponse;
-  static deserializeBinaryFromReader(message: GetTraitsResponse, reader: jspb.BinaryReader): GetTraitsResponse;
+  static serializeBinaryToWriter(message: GetProfileResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetProfileResponse;
+  static deserializeBinaryFromReader(message: GetProfileResponse, reader: jspb.BinaryReader): GetProfileResponse;
 }
 
-export namespace GetTraitsResponse {
+export namespace GetProfileResponse {
   export type AsObject = {
-    traits: string,
+    profile: string,
   }
 }
 
-export class UpdateTraitsRequest extends jspb.Message {
+export class UpdateProfileRequest extends jspb.Message {
   getIdentityId(): string;
   setIdentityId(value: string): void;
 
-  getTraits(): string;
-  setTraits(value: string): void;
+  getProfile(): string;
+  setProfile(value: string): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): UpdateTraitsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: UpdateTraitsRequest): UpdateTraitsRequest.AsObject;
+  toObject(includeInstance?: boolean): UpdateProfileRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateProfileRequest): UpdateProfileRequest.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: UpdateTraitsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): UpdateTraitsRequest;
-  static deserializeBinaryFromReader(message: UpdateTraitsRequest, reader: jspb.BinaryReader): UpdateTraitsRequest;
+  static serializeBinaryToWriter(message: UpdateProfileRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateProfileRequest;
+  static deserializeBinaryFromReader(message: UpdateProfileRequest, reader: jspb.BinaryReader): UpdateProfileRequest;
 }
 
-export namespace UpdateTraitsRequest {
+export namespace UpdateProfileRequest {
   export type AsObject = {
     identityId: string,
-    traits: string,
+    profile: string,
   }
 }
 
-export class UpdateTraitsResponse extends jspb.Message {
+export class UpdateProfileResponse extends jspb.Message {
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): UpdateTraitsResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: UpdateTraitsResponse): UpdateTraitsResponse.AsObject;
+  toObject(includeInstance?: boolean): UpdateProfileResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: UpdateProfileResponse): UpdateProfileResponse.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: UpdateTraitsResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): UpdateTraitsResponse;
-  static deserializeBinaryFromReader(message: UpdateTraitsResponse, reader: jspb.BinaryReader): UpdateTraitsResponse;
+  static serializeBinaryToWriter(message: UpdateProfileResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): UpdateProfileResponse;
+  static deserializeBinaryFromReader(message: UpdateProfileResponse, reader: jspb.BinaryReader): UpdateProfileResponse;
 }
 
-export namespace UpdateTraitsResponse {
+export namespace UpdateProfileResponse {
   export type AsObject = {
   }
 }

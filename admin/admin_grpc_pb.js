@@ -490,26 +490,26 @@ function deserialize_depot_devtools_auth_v0_identity_admin_GetOAuth2ClientsRespo
   return devtools_auth_v0_proto_identity_admin_admin_pb.GetOAuth2ClientsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_depot_devtools_auth_v0_identity_admin_GetTraitsRequest(arg) {
-  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.GetTraitsRequest)) {
-    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.GetTraitsRequest');
+function serialize_depot_devtools_auth_v0_identity_admin_GetProfileRequest(arg) {
+  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.GetProfileRequest)) {
+    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.GetProfileRequest');
   }
   return Buffer.from(arg.serializeBinary());
 }
 
-function deserialize_depot_devtools_auth_v0_identity_admin_GetTraitsRequest(buffer_arg) {
-  return devtools_auth_v0_proto_identity_admin_admin_pb.GetTraitsRequest.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_depot_devtools_auth_v0_identity_admin_GetProfileRequest(buffer_arg) {
+  return devtools_auth_v0_proto_identity_admin_admin_pb.GetProfileRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_depot_devtools_auth_v0_identity_admin_GetTraitsResponse(arg) {
-  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.GetTraitsResponse)) {
-    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.GetTraitsResponse');
+function serialize_depot_devtools_auth_v0_identity_admin_GetProfileResponse(arg) {
+  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.GetProfileResponse)) {
+    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.GetProfileResponse');
   }
   return Buffer.from(arg.serializeBinary());
 }
 
-function deserialize_depot_devtools_auth_v0_identity_admin_GetTraitsResponse(buffer_arg) {
-  return devtools_auth_v0_proto_identity_admin_admin_pb.GetTraitsResponse.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_depot_devtools_auth_v0_identity_admin_GetProfileResponse(buffer_arg) {
+  return devtools_auth_v0_proto_identity_admin_admin_pb.GetProfileResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_depot_devtools_auth_v0_identity_admin_GetUserBaseStatisticsRequest(arg) {
@@ -710,26 +710,26 @@ function deserialize_depot_devtools_auth_v0_identity_admin_UpdateOAuth2ClientRes
   return devtools_auth_v0_proto_identity_admin_admin_pb.UpdateOAuth2ClientResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_depot_devtools_auth_v0_identity_admin_UpdateTraitsRequest(arg) {
-  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.UpdateTraitsRequest)) {
-    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.UpdateTraitsRequest');
+function serialize_depot_devtools_auth_v0_identity_admin_UpdateProfileRequest(arg) {
+  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.UpdateProfileRequest)) {
+    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.UpdateProfileRequest');
   }
   return Buffer.from(arg.serializeBinary());
 }
 
-function deserialize_depot_devtools_auth_v0_identity_admin_UpdateTraitsRequest(buffer_arg) {
-  return devtools_auth_v0_proto_identity_admin_admin_pb.UpdateTraitsRequest.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_depot_devtools_auth_v0_identity_admin_UpdateProfileRequest(buffer_arg) {
+  return devtools_auth_v0_proto_identity_admin_admin_pb.UpdateProfileRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_depot_devtools_auth_v0_identity_admin_UpdateTraitsResponse(arg) {
-  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.UpdateTraitsResponse)) {
-    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.UpdateTraitsResponse');
+function serialize_depot_devtools_auth_v0_identity_admin_UpdateProfileResponse(arg) {
+  if (!(arg instanceof devtools_auth_v0_proto_identity_admin_admin_pb.UpdateProfileResponse)) {
+    throw new Error('Expected argument of type depot.devtools.auth.v0.identity.admin.UpdateProfileResponse');
   }
   return Buffer.from(arg.serializeBinary());
 }
 
-function deserialize_depot_devtools_auth_v0_identity_admin_UpdateTraitsResponse(buffer_arg) {
-  return devtools_auth_v0_proto_identity_admin_admin_pb.UpdateTraitsResponse.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_depot_devtools_auth_v0_identity_admin_UpdateProfileResponse(buffer_arg) {
+  return devtools_auth_v0_proto_identity_admin_admin_pb.UpdateProfileResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 
@@ -844,27 +844,27 @@ var AdminService = exports.AdminService = {
     responseSerialize: serialize_depot_devtools_auth_v0_identity_admin_UpdateAddressResponse,
     responseDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_UpdateAddressResponse,
   },
-  getTraits: {
-    path: '/depot.devtools.auth.v0.identity.admin.Admin/GetTraits',
+  getProfile: {
+    path: '/depot.devtools.auth.v0.identity.admin.Admin/GetProfile',
     requestStream: false,
     responseStream: false,
-    requestType: devtools_auth_v0_proto_identity_admin_admin_pb.GetTraitsRequest,
-    responseType: devtools_auth_v0_proto_identity_admin_admin_pb.GetTraitsResponse,
-    requestSerialize: serialize_depot_devtools_auth_v0_identity_admin_GetTraitsRequest,
-    requestDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_GetTraitsRequest,
-    responseSerialize: serialize_depot_devtools_auth_v0_identity_admin_GetTraitsResponse,
-    responseDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_GetTraitsResponse,
+    requestType: devtools_auth_v0_proto_identity_admin_admin_pb.GetProfileRequest,
+    responseType: devtools_auth_v0_proto_identity_admin_admin_pb.GetProfileResponse,
+    requestSerialize: serialize_depot_devtools_auth_v0_identity_admin_GetProfileRequest,
+    requestDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_GetProfileRequest,
+    responseSerialize: serialize_depot_devtools_auth_v0_identity_admin_GetProfileResponse,
+    responseDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_GetProfileResponse,
   },
-  updateTraits: {
-    path: '/depot.devtools.auth.v0.identity.admin.Admin/UpdateTraits',
+  updateProfile: {
+    path: '/depot.devtools.auth.v0.identity.admin.Admin/UpdateProfile',
     requestStream: false,
     responseStream: false,
-    requestType: devtools_auth_v0_proto_identity_admin_admin_pb.UpdateTraitsRequest,
-    responseType: devtools_auth_v0_proto_identity_admin_admin_pb.UpdateTraitsResponse,
-    requestSerialize: serialize_depot_devtools_auth_v0_identity_admin_UpdateTraitsRequest,
-    requestDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_UpdateTraitsRequest,
-    responseSerialize: serialize_depot_devtools_auth_v0_identity_admin_UpdateTraitsResponse,
-    responseDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_UpdateTraitsResponse,
+    requestType: devtools_auth_v0_proto_identity_admin_admin_pb.UpdateProfileRequest,
+    responseType: devtools_auth_v0_proto_identity_admin_admin_pb.UpdateProfileResponse,
+    requestSerialize: serialize_depot_devtools_auth_v0_identity_admin_UpdateProfileRequest,
+    requestDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_UpdateProfileRequest,
+    responseSerialize: serialize_depot_devtools_auth_v0_identity_admin_UpdateProfileResponse,
+    responseDeserialize: deserialize_depot_devtools_auth_v0_identity_admin_UpdateProfileResponse,
   },
   getCredentials: {
     path: '/depot.devtools.auth.v0.identity.admin.Admin/GetCredentials',
